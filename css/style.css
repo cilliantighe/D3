@@ -1,0 +1,201 @@
+/*
+Interactive Graphics: CA1
+Author: Cillian Tighe
+Student No: N00152737
+*/
+
+/* --- SETTING DEFAULT STYLE --- */
+
+body {
+    background-color: #1D1D1D;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FEFEFE;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+text {
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+/* --- STYLING HR TAG --- */
+
+.divider {
+    border-top: 1px solid #fefefe;
+    margin: 0px;
+}
+
+/* --- GRAPH STYLING -- */
+
+#myGraph {
+    width: 100%;
+}
+
+.line {
+    fill: none;
+    opacity: 0;
+    stroke-width: 2px;
+}
+
+.scatterPoint {
+    fill: crimson;
+    opacity: 0;
+}
+
+.rects {
+    opacity: 1;
+    stroke: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- AXIS STYLING & GRID -- */
+
+path.domain,
+.tick line {
+    stroke: #FEFEFE;
+    stroke-width: 1px;
+}
+
+.tick text {
+    fill: #FEFEFE;
+    font-size: 12px
+}
+
+.grid line {
+    opacity: 0.5;
+    stroke: #fefefe;
+    stroke-dasharray: 5;
+}
+
+/* --- LEGEND STYLING -- */
+
+.legend {
+    margin: 0;
+    margin-top: 21px;
+}
+
+.legendText {
+    margin-bottom: 5px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.legendColor {
+    width: 50px;
+    height: 2px;
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+}
+
+
+/* --- OPTIONS STYLING -- */
+
+#options {
+    border-right: 1px solid #fefefe;
+}
+
+#menu {
+    margin-top: 10px;
+}
+
+.toggleButtons {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.toggleInfo {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* --- INFORMATION STYLING -- */
+
+#about p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* --- TOOLTIP STYLING -- */
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: 55px;
+    padding: 2px;
+    color: #282830;
+    background: #fefefe;
+    border: 0px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+/* --- CHECKBOX STYLING -- */
+
+/* --- https://www.w3schools.com/howto/howto_css_switch.asp --- */
+
+.switch {
+    float: left;
+    margin-right: 5px;
+    padding: 0px 5px;
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bdc3c7;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2px;
+    background-color: #fefefe;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #e74c3c;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #e74c3c;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
